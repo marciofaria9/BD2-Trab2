@@ -1,0 +1,29 @@
+package br.edu.univas.si5.bd2.entties;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="detalhe_cliente")
+public class DetalheCliente implements Serializable {
+
+	@Id
+	private Integer CPF;
+	
+	@JoinColumn(name = "FK_CLIENTE")
+	private Cliente cliente;
+	
+	private String rua;
+	private String bairro;
+	private Integer numero;
+	private String cidade;
+	private Date TelosUpDt;
+}

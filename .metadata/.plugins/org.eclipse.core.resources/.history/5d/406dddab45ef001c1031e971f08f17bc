@@ -1,0 +1,55 @@
+package br.edu.univas.si5.bd2.entties;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
+public class Cliente implements Serializable {
+
+	@Id
+	private Integer AutoId;
+	private String nome;
+	private Date nascimento;
+
+	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY)
+	private Set<Pedido> funcionarios;
+
+	public Cliente() {
+
+	}
+
+	public Integer getAutoId() {
+		return AutoId;
+	}
+
+	public void setAutoId(Integer autoId) {
+		AutoId = autoId;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Date getNascimento() {
+		return nascimento;
+	}
+
+	public void setNascimento(Date nascimento) {
+		this.nascimento = nascimento;
+	}
+
+	@Override
+	public String toString() {
+		return "ID = " + AutoId + ", Nome = " + nome + "DN = " + nascimento;
+	}
+}

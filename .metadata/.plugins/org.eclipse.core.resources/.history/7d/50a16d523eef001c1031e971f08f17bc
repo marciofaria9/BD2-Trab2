@@ -1,0 +1,19 @@
+package br.edu.univas.si5.bd2.ProjetoDB01;
+
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
+
+import br.edu.univas.si5.bd2.utils.HibernateUtil;
+
+public class App {
+	public static void main(String[] args) {
+
+
+	}
+
+
+}

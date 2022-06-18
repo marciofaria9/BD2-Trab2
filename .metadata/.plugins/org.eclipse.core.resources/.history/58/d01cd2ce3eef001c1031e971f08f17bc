@@ -1,0 +1,12 @@
+package br.edu.univas.si5.bd2.entties;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Detalhe_Cliente")
+public class DetalheCliente implements Serializable{
+
+}
