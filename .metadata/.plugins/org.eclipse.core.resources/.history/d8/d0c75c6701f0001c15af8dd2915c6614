@@ -1,0 +1,78 @@
+package br.edu.univas.si5.bd2.DAO;
+
+import java.util.Date;
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+
+import br.edu.univas.si5.bd2.entties.Cliente;
+import br.edu.univas.si5.bd2.entties.DetalheCliente;
+import br.edu.univas.si5.bd2.entties.Pedido;
+import br.edu.univas.si5.bd2.utils.HibernateUtil;
+import br.edu.univas.si5.bd2.view.View;
+
+public class Merge {
+
+	Scanner leitura = new Scanner(System.in);
+	View view = new View();
+
+	public void editaCliente() {
+		EntityManager em = HibernateUtil.getEntityManager();
+		em = HibernateUtil.getEntityManager();
+
+		view.informaAutoId();
+		leitura = new Scanner(System.in);
+		int PK = leitura.nextInt();
+		leitura.nextLine();
+		Cliente cliente = em.find(Cliente.class, PK);
+
+		if (cliente != null) {
+
+			view.editando();
+			view.informaNome();
+			cliente.setNome(leitura.nextLine());
+			view.informaNascimento();
+			cliente.setNascimento(new Date(leitura.nextLine()));
+
+			em.getTransaction().begin();
+			em.merge(cliente);
+			em.getTransaction().commit();
+			view.atualizado();
+
+		}
+
+		else {
+			view.naoEncontrado();
+		}
+
+	}
+
+	public void editaPedido() {
+
+		EntityManager em = HibernateUtil.getEntityManager();
+		em = HibernateUtil.getEntityManager();
+		view.informaID();
+		int ID = leitura.nextInt();
+		leitura.nextLine();
+
+		Pedido pedido = em.find(Pedido.class, ID);
+
+		if (pedido != null) {
+
+			view.editando();
+			view.informaID();
+			pedido.setID(leitura.nextInt());
+			pedido.setData(new Date());
+			view.informaValor();
+			pedido.setValor(leitura.nextDouble());
+			leitura.nextLine();
+
+		} else {
+			view.naoEncontrado();
+		}
+	}
+
+	public void editaDetalhe() {
+
+	}
+}

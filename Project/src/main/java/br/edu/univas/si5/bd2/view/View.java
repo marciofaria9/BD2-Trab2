@@ -11,7 +11,10 @@ public class View {
 		System.out.println("Digite 4 para encontrar pedido");
 		System.out.println("Digite 5 deletar cliente");
 		System.out.println("Digite 6 deletar pedido");
-		System.out.println("Digite 0 para sair");
+		System.out.println("Digite 7 Editar cliente");
+		System.out.println("Digite 8 Editar Pedido");
+		System.out.println("Digite 9 Editar Ediar informações adicionais do cliente");
+		System.out.println("\nDigite 0 para sair");
 
 	}
 
@@ -86,6 +89,14 @@ public class View {
 
 	public void alertaCPF() {
 		System.out.println("Confirme digitando o CPF do cliente");
+	}
+	
+	public void editando() {
+		System.out.println("Edição\n");
+	}
+	
+	public void atualizado() {
+		System.out.println("Atualizado!\n");
 	}
 	
 }
