@@ -1,0 +1,17 @@
+package br.edu.univas.si5.bd2.view;
+
+public class View {
+
+	public void informaCliente() {
+		System.out.println("Informe o nome ID do cliente:");
+
+	}
+
+	public void informaNome() {
+		System.out.println("Informe o nome do cliente:");
+	}
+	
+	public void informaNascimento() {
+		System.out.println("Informe a data de nascimento do cliente:");
+	}
+}

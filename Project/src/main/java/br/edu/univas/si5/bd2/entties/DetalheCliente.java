@@ -4,10 +4,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -27,6 +26,7 @@ public class DetalheCliente implements Serializable {
 	private Integer numero;
 	private String cidade;
 	private Date telosUpDt;
+	
 
 	public Integer getCPF() {
 		return CPF;
@@ -76,18 +76,19 @@ public class DetalheCliente implements Serializable {
 		this.cidade = cidade;
 	}
 
+	
 	public Date getTelosUpDt() {
 		return telosUpDt;
 	}
 
 	public void setTelosUpDt(Date telosUpDt) {
-		telosUpDt = telosUpDt;
+		this.telosUpDt = telosUpDt;
 	}
-	
+
 	public String toString() {
 		
 	return "CPF = " + CPF + " Rua = " + rua + " Bairro = " + bairro + " Numero = " + numero  + 
-			" Cidade = " + cidade + " TelosUpDt = " + telosUpDt;
+			" Cidade = " + cidade;
 	}
 
 }
