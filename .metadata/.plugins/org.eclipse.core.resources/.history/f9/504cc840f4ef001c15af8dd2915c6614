@@ -1,0 +1,30 @@
+package br.edu.univas.si5.bd2.DAO;
+
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+
+import br.edu.univas.si5.bd2.entties.Cliente;
+import br.edu.univas.si5.bd2.entties.Pedido;
+import br.edu.univas.si5.bd2.utils.HibernateUtil;
+
+public class Find {
+
+	Scanner leitura;
+	private EntityManager em = HibernateUtil.getEntityManager();
+	
+	public void findCliente() {
+		
+		leitura = new Scanner(System.in);
+		int PK = leitura.nextInt();
+		leitura.nextLine();
+		
+		System.out.println("Digite o Id do cliente: /n");
+		Cliente cliente = em.find(Cliente.class, PK);
+		System.out.println("Cliente: " + cliente);
+		
+	}
+	
+	
+	
+}

@@ -1,19 +1,11 @@
 package br.edu.univas.si5.bd2.ProjetoDB01;
 
-import java.util.Date;
-import java.util.List;
 import java.util.Scanner;
 
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-
+import br.edu.univas.si5.bd2.DAO.Find;
 import br.edu.univas.si5.bd2.DAO.PersisteCliente;
 import br.edu.univas.si5.bd2.DAO.PersisteDetalhe;
 import br.edu.univas.si5.bd2.DAO.PersistePedido;
-import br.edu.univas.si5.bd2.entties.Cliente;
-import br.edu.univas.si5.bd2.entties.DetalheCliente;
-import br.edu.univas.si5.bd2.entties.Pedido;
-import br.edu.univas.si5.bd2.utils.HibernateUtil;
 import br.edu.univas.si5.bd2.view.View;
 
 public class App {
@@ -32,26 +24,47 @@ public class App {
 
 	public void menu() {
 
+		Scanner leitura = new Scanner(System.in);
+
 		PersisteCliente cliente = new PersisteCliente();
 		PersisteDetalhe detalhe = new PersisteDetalhe();
 		PersistePedido pedido = new PersistePedido();
+		Find find = new Find();
 
-		Scanner leitura = new Scanner(System.in);
 		View view = new View();
-		view.menuInicial();
-		int escolha = readInt(leitura);
+		int escolha = 999;
 
-		if (escolha == 1) {
+		do {
+			view.menuInicial();
 
-			cliente.persisteCliente();
+			escolha = readInt(leitura);
 
-		}
+			if (escolha == 1) {
 
-		else if (escolha == 2) {
+				cliente.persisteCliente();
 
-			pedido.persistePedido();
+			}
 
-		}
+			else if (escolha == 2) {
+
+				pedido.persistePedido();
+			}
+
+			else if (escolha == 3) {
+
+				find.findCliente();
+
+			}
+
+			else if (escolha == 4) {
+
+				find.findPedido();
+
+			}
+
+		} while (escolha != 0);
+
+		view.sair();
 
 	}
 

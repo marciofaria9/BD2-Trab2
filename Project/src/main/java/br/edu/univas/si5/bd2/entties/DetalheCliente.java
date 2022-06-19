@@ -16,7 +16,7 @@ public class DetalheCliente implements Serializable {
 
 	@Id
 	private Integer CPF;
-    
+
 	@OneToOne
 	@JoinColumn(name = "FK_CLIENTE")
 	private Cliente cliente;
@@ -26,7 +26,6 @@ public class DetalheCliente implements Serializable {
 	private Integer numero;
 	private String cidade;
 	private Date telosUpDt;
-	
 
 	public Integer getCPF() {
 		return CPF;
@@ -76,7 +75,6 @@ public class DetalheCliente implements Serializable {
 		this.cidade = cidade;
 	}
 
-	
 	public Date getTelosUpDt() {
 		return telosUpDt;
 	}
@@ -86,9 +84,8 @@ public class DetalheCliente implements Serializable {
 	}
 
 	public String toString() {
-		
-	return "CPF = " + CPF + " Rua = " + rua + " Bairro = " + bairro + " Numero = " + numero  + 
-			" Cidade = " + cidade;
+
+		return "CPF = " + CPF + " Rua = " + rua + " Bairro = " + bairro + " Numero = " + numero + " Cidade = " + cidade;
 	}
 
 }

@@ -7,6 +7,9 @@ public class View {
 		System.out.println("Bem vindo ao controle de Clientes e pedidos \n");
 		System.out.println("Digite 1 para Cadastro de cliente");
 		System.out.println("Digite 2 para Cadastro de pedido");
+		System.out.println("Digite 3 para encontrar cliente");
+		System.out.println("Digite 4 para encontrar pedido");
+		System.out.println("Digite 0 para sair");
 
 	}
 
@@ -47,7 +50,7 @@ public class View {
 	}
 
 	public void informaFK() {
-		System.out.println("Digite o ID do Cliente:");
+		System.out.println("Digite o ID do Cliente responsável pelo pedido:");
 	}
 
 	public void informaID() {
@@ -62,4 +65,11 @@ public class View {
 		System.out.println("Informe o Valor:");
 	}
 
+	public void sair() {
+		System.out.println("Tchau!");
+	}
+
+	public void informaAutoId() {
+		System.out.println("Informe o AutoId do cliente");
+	}
 }

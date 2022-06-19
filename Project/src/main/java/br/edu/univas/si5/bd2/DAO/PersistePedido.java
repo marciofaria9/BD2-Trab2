@@ -30,18 +30,16 @@ public class PersistePedido {
 
 		Pedido pedido = new Pedido();
 		view.informaID();
-      	pedido.setID(leitura.nextInt());
-      	pedido.setData(new Date());
-      	view.informaValor();
-      	pedido.setValor(leitura.nextDouble());
-      	leitura.nextLine();
-      	pedido.setCliente(cliente);
-      	
+		pedido.setID(leitura.nextInt());
+		pedido.setData(new Date());
+		view.informaValor();
+		pedido.setValor(leitura.nextDouble());
+		leitura.nextLine();
+		pedido.setCliente(cliente);
+
 		em.getTransaction().begin();
 		em.persist(pedido);
 		em.getTransaction().commit();
-      	
-      	
 
 	}
 }
