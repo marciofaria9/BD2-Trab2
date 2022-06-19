@@ -2,6 +2,7 @@ package br.edu.univas.si5.bd2.ProjetoDB01;
 
 import java.util.Scanner;
 
+import br.edu.univas.si5.bd2.DAO.Delete;
 import br.edu.univas.si5.bd2.DAO.Find;
 import br.edu.univas.si5.bd2.DAO.PersisteCliente;
 import br.edu.univas.si5.bd2.DAO.PersisteDetalhe;
@@ -30,6 +31,7 @@ public class App {
 		PersisteDetalhe detalhe = new PersisteDetalhe();
 		PersistePedido pedido = new PersistePedido();
 		Find find = new Find();
+		Delete delete = new Delete();
 
 		View view = new View();
 		int escolha = 999;
@@ -61,7 +63,18 @@ public class App {
 				find.findPedido();
 
 			}
+			
+			else if (escolha == 5) {
 
+				delete.removeCliente();
+			}
+   
+			else if (escolha == 6) {
+
+				delete.removePedido();
+			}
+			
+			
 		} while (escolha != 0);
 
 		view.sair();

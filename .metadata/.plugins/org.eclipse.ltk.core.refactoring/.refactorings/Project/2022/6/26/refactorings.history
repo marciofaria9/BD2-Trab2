@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;funcionarios&apos; in &apos;br.edu.univas.si5.bd2.entties.Cliente&apos; to &apos;pedidos&apos;&#x0D;&#x0A;- Original project: &apos;Project&apos;&#x0D;&#x0A;- Original element: &apos;br.edu.univas.si5.bd2.entties.Cliente.funcionarios&apos;&#x0D;&#x0A;- Renamed element: &apos;br.edu.univas.si5.bd2.entties.Cliente.pedidos&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;funcionarios&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;br.edu.univas.si5.bd2.entties{Cliente.java[Cliente^funcionarios" name="pedidos" references="true" setter="false" stamp="1655661349457" textual="false" version="1.0"/>
+</session>

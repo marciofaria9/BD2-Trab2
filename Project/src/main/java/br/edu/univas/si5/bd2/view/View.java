@@ -9,6 +9,8 @@ public class View {
 		System.out.println("Digite 2 para Cadastro de pedido");
 		System.out.println("Digite 3 para encontrar cliente");
 		System.out.println("Digite 4 para encontrar pedido");
+		System.out.println("Digite 5 deletar cliente");
+		System.out.println("Digite 6 deletar pedido");
 		System.out.println("Digite 0 para sair");
 
 	}
@@ -72,4 +74,18 @@ public class View {
 	public void informaAutoId() {
 		System.out.println("Informe o AutoId do cliente");
 	}
+	
+	public void naoEncontrado() {
+		System.out.println("não encontrado");
+	}
+	
+	public void removido() {
+		System.out.println("removido!");
+	}
+	
+
+	public void alertaCPF() {
+		System.out.println("Confirme digitando o CPF do cliente");
+	}
+	
 }

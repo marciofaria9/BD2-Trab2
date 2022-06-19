@@ -18,8 +18,16 @@ public class Cliente implements Serializable {
 	private Date nascimento;
 
 	@OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY)
-	private Set<Pedido> funcionarios;
+	private Set<Pedido> pedidos;
 	
+
+	public Set<Pedido> getPedidos() {
+		return pedidos;
+	}
+
+	public void setFuncionarios(Set<Pedido> pedidos) {
+		this.pedidos = pedidos;
+	}
 
 	public Cliente() {
 
