@@ -48,4 +48,9 @@
 		<item key="updateQualifiedNames" value="false"/>
 		<item key="patterns" value="*"/>
 	</section>
+	<section name="NewPackageWizardPage">
+		<item key="create_package_info_java" value="false"/>
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
 </section>
